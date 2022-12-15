@@ -1,0 +1,42 @@
+.filters-container {
+    margin-bottom: 50px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+
+    &__item:not(:last-child) {
+        margin-right: 8px;
+    }
+
+    &__filter {
+        padding: 6px 22px;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: $third-color;
+        border: none;
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.62;
+        letter-spacing: 0.03em;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+                    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+                    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__first-filter {
+        padding-left: 25px px;
+        padding-right: 25px;
+    }
+
+    &__filter:hover,
+    &__filter:focus {
+    color: $third-text-color;
+        background-color: $hover-color;
+        box-shadow: 0px 3px 1px rgb(0 0 0 / 10%), 
+                    0px 1px 2px rgb(0 0 0 / 8%), 
+                    0px 2px 2px rgb(0 0 0 / 12%);
+    }
+}

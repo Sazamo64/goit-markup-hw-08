@@ -1,0 +1,80 @@
+.page-header {
+    border-bottom: 1px solid $border-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    &__container {
+        height: 80px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.logo {
+    display: inline-block;
+    width: 145px;
+    height: 31px;
+    margin-right: 93px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color: inherit;
+
+    &__colorize {
+        color: $hover-color;
+    }
+}
+.nav-panel {
+    margin-right: auto;
+}
+.nav-list {
+    display: flex;
+    align-items: center;
+
+    &__item:not(:last-child) {
+    margin-right: 50px;
+    }
+}
+.nav-list__links {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-decoration: none;
+    color: inherit;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $hover-color;
+    }
+}
+.header-contacts {
+    display: flex;
+    align-items: center;
+
+    &__item:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+.header-contacts__links {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    text-decoration: none;
+    color: $secondary-text-color;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: $hover-color;
+    }
+}
+.header-contacts__text {
+    margin: 0;
+    margin-left: 10px;
+}

@@ -1,0 +1,121 @@
+.page-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $second-color;
+
+    &__container {
+        display: flex;
+    }
+
+    &__contacts {
+        width: 231px;
+        margin-right: 70px;
+    }
+    &__links {
+        padding-top: 12px;
+        margin-right: 93px;
+    }
+    &__subscription {
+        padding-top: 12px;
+    }
+}
+
+.logo--footer {
+    margin-bottom: 20px;
+    color: $third-text-color;
+}
+
+.address {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $third-text-color;
+
+    &__text {
+        margin: 0;
+        margin-bottom: 9px;
+    }
+}
+
+.footer-contacts {
+    &__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
+
+    &__links {
+        text-decoration: none;
+        color: #FFFFFF96;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__links:hover,
+    &__links:focus {
+        color: $hover-color;
+    }
+}
+
+.footer-icons {
+    display: flex;
+
+    &__item:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    &__links {
+        width: 44px;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        color: $third-text-color;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    &__links:hover,
+    &__links:focus {
+        background-color: $hover-color;
+    }
+}
+
+.subscription-form {
+    display: flex;
+
+    &__field {
+        width: 358px;
+        height: 50px;
+        margin-right: 12px;
+        padding-left: 12px;
+        background-color: $second-color;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    }
+
+    &__button {
+    position: relative;
+        width: 200px;
+        height: 50px;
+        display: flex;
+        padding: 0;
+        padding-left: 28px;
+        align-items: center;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+        color: $third-text-color;
+        background-color: $hover-color;
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+        cursor: pointer
+    }
+
+    &__icon {
+        position: absolute;
+        right: 28px;
+        fill: currentColor;
+        color: $third-text-color;
+    }
+}
