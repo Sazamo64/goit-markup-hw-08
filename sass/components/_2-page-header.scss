@@ -19,7 +19,7 @@
     display: inline-block;
     width: 145px;
     height: 31px;
-    margin-right: 93px;
+    margin-right: auto;
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 24px;
@@ -27,7 +27,11 @@
     letter-spacing: 0.03em;
     text-decoration: none;
     color: inherit;
+    @media screen and (min-width: 768px) {
+        margin-right: 88px;
+    }
     @media screen and (min-width: 1600px) {
+        margin-right: 93px;
         font-size: 26px;
         line-height: 1.19;
     }
@@ -89,4 +93,21 @@
 .header-contacts__text {
     // margin: 0;
     // margin-left: 10px;
+}
+.menu-button {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    & .close-menu {
+        display: none;
+    }
+    &.is-open .close-menu {
+        display: block;
+    }
+    &.is-open .open-menu {
+        display: none;
+    }
 }

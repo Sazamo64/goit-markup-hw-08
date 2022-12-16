@@ -30,7 +30,7 @@ body {
   display: inline-block;
   width: 145px;
   height: 31px;
-  margin-right: 93px;
+  margin-right: auto;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 24px;
@@ -39,8 +39,14 @@ body {
   text-decoration: none;
   color: inherit;
 }
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+  }
+}
 @media screen and (min-width: 1600px) {
   .logo {
+    margin-right: 93px;
     font-size: 26px;
     line-height: 1.19;
   }
@@ -53,6 +59,78 @@ body {
   .navigation-container {
     display: none;
   }
+}
+
+.menu-button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.menu-button .close-menu {
+  display: none;
+}
+.menu-button.is-open .close-menu {
+  display: block;
+}
+.menu-button.is-open .open-menu {
+  display: none;
+}
+
+.hero {
+  max-width: 1600px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+  background-color: #212121;
+}
+@media screen and (min-width: 1600px) {
+  .hero {
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+
+.hero__header {
+  width: 360px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.3;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+}
+@media screen and (min-width: 1600px) {
+  .hero__header {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+.hero__button {
+  width: 200px;
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #2196F3;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
 }
 
 .container {
@@ -75,4 +153,10 @@ body {
   .container {
     width: 1200px;
   }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }/*# sourceMappingURL=main.css.map */
