@@ -1,6 +1,17 @@
 .qualities {
     margin: 0;
-    // display: flex;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+
+        &__item:not(:nth-child(2n+2)) {
+            margin-right: 30px;
+        }
+        &__item:not(:nth-last-child(-n+2)) {
+            margin-bottom: 30px;
+        }
+    }
     // justify-content: center;
 
     // &__item:not(:last-child) {
@@ -17,6 +28,9 @@
     align-items: center;
     border-radius: 4px;
     background-color: $third-color;
+    @media screen and (min-width: 768px) {
+        width: 354px;
+    }
 }
 
 .qualities__header {
@@ -41,4 +55,7 @@
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: $secondary-text-color;
+    @media screen and (min-width: 768px) {
+        width: 354px;
+    }
 }
