@@ -1,6 +1,5 @@
 // *КОНТЕЙНЕРИ БЛОКІВ
 .container {
-    // width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
@@ -18,7 +17,6 @@
 
 // *СПИСКИ
 .list {
-    margin: 0;
     padding: 0;
     list-style: none;
 }
@@ -42,44 +40,56 @@
 
 // *SVG ІКОНКИ
 .icon {
-    // fill: currentColor;
+    fill: currentColor;
 }
 
 // *СЕКЦІЇ
 .section {
-    // padding-top: 94px;
-    // padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1600px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+    
 }
 
 // * ПРИХОВАНІ ЗАГОЛОВКИ
 .visually-hidden {
-    // position: absolute;
-    // white-space: nowrap;
-    // width: 1px;
-    // height: 1px;
-    // overflow: hidden;
-    // border: 0;
-    // padding: 0;
-    // clip: rect(0 0 0 0);
-    // clip-path: inset(50%);
-    // margin: -1px;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
 }
 
 // *ЗАГОЛОВКИ СЕКЦІЙ
 .section-header {
-    // margin: 0;
-    // margin-bottom: 50px;
-    // text-align: center;
-    // font-size: 36px;
-    // line-height: 1.16;
-    // letter-spacing: 0.03em;
+    margin: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+
+    @media screen and (min-width: 1600px) {
+        margin-bottom: 50px;
+        font-size: 36px;
+        line-height: 1.16;
+    }
 }
 
 // * IMG ЗОБРАЖЕННЯ 
 img {
-    // display: block;
-    // max-width: 100%;
-    // height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 // *ЗАКЛИК (У ФУТЕРІ)

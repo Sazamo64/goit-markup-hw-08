@@ -17,12 +17,51 @@
     <header class="page-header">
         <div class="container page-header__container">
             <a href="./index.html" class="logo"><span class="logo__colorize">Web</span>Studio</a>
-            <div class="navigation-container">
+            <!-- МОБІЛЬНЕ МЕНЮ - КНОПКА ВІДКРИТТЯ -->
+            <button type="button" 
+                    class="menu-button js-open-menu" 
+                    aria-expanded="false"
+                    aria-controls="menu-container"
+                    data-menu-button>
+                <svg class="icon" width="40" height="40" aria-label="Перемикач мобільного меню">
+                    <use href="./images/icons.svg#open_menu" class="open-menu"></use>
+                </svg>
+            </button>
+            <!-- МОБІЛЬНЕ МЕНЮ -->
+            <div class="menu-container js-menu-container" id="menu-container">
+                <!-- МОБІЛЬНЕ МЕНЮ - КНОПКА ЗАКРИТТЯ -->
+                <button type="button" class="menu-button menu-button--close js-close-menu">
+                    <svg class="icon" width="40" height="40" aria-label="Перемикач мобільного меню">
+                        <use href="./images/icons.svg#close_menu" class="close-menu"></use>
+                    </svg>
+                </button>
                 <nav class="nav-panel">
                     <ul class="list nav-list">
                         <li class="nav-list__item"><a href="" class="nav-list__links current">Студія</a></li>
                         <li class="nav-list__item"><a href="./portfolio.html" class="nav-list__links">Портфоліо</a></li>
                         <li class="nav-list__item"><a href="" class="nav-list__links">Контакти</a></li>
+                    </ul>
+                    <ul class=" list mobile-contacts">
+                        <li class="mobile-contacts__item">
+                            <a href="tel:+380961111111" class="mobile-contacts__tel">+38 096 111 11 11</a>
+                        </li>
+                        <li class="mobile-contacts__item">
+                            <a href="mailto:info@devstudio.com" class="mobile-contacts__mail">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                    <ul class=" list mobile-networks">
+                        <li class="mobile-networks__item">
+                            <a href="" class="mobile-networks__links">Instagram</a>
+                        </li>
+                        <li class="mobile-networks__item">
+                            <a href="" class="mobile-networks__links">Twitter</a>
+                        </li>
+                        <li class="mobile-networks__item">
+                            <a href="" class="mobile-networks__links">Facebook</a>
+                        </li>
+                        <li class="mobile-networks__item">
+                            <a href="" class="mobile-networks__links">LinkedIn</a>
+                        </li>
                     </ul>
                 </nav>
                 <ul class="list header-contacts">
@@ -44,15 +83,6 @@
                     </li>
                 </ul>
             </div>
-            <button type="button" class="menu-button" aria-expanded="false" data-menu-button>
-                <svg class="icon" 
-                    width="40" 
-                    height="40"
-                    aria-label="Перемикач мобільного меню">
-                    <use href="./images/icons.svg#open_menu" class="open-menu"></use>
-                    <use href="./images/icons.svg#close_menu" class="close-menu"></use>
-                </svg>
-            </button>
         </div>
     </header>
 <!-- ^УНІКАЛЬНИЙ КОНТЕНТ -->
@@ -135,7 +165,7 @@
                 <h2 class="section-header">Наша команда</h2>
                 <ul class="team list">
                     <li class="team__item">
-                        <img src="./images/team-img/Ihor.jpg" alt="Ihor's photo" width="270">
+                        <img src="./images/team-img/Ihor.jpg"class="team__photo" alt="Ihor's photo">
                         <div class="team-info">
                             <h3 class="team-info__name">Ігор Дем'яненко</h3>
                             <p class="team-info__position">Product Designer</p>
@@ -172,7 +202,7 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/team-img/Olha.jpg" alt="Olha's photo" width="270">
+                        <img src="./images/team-img/Olha.jpg"class="team__photo" alt="Olha's photo">
                         <div class="team-info">
                             <h3 class="team-info__name">Ольга Рєпіна</h3>
                             <p class="team-info__position">Frontend Developer</p>
@@ -209,7 +239,7 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/team-img/Mykola.jpg" alt="Mykola's photo" width="270">
+                        <img src="./images/team-img/Mykola.jpg"class="team__photo" alt="Mykola's photo">
                         <div class="team-info">
                             <h3 class="team-info__name">Микола Тарасов</h3>
                             <p class="team-info__position">Marketing</p>
@@ -246,7 +276,7 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/team-img/Mykhailo.jpg" alt="Mykhailo's photo" width="270">
+                        <img src="./images/team-img/Mykhailo.jpg"class="team__photo" alt="Mykhailo's photo">
                         <div class="team-info">
                             <h3 class="team-info__name">Михайло Єрмаков</h3>
                             <p class="team-info__position">UI Designer</p>
@@ -450,6 +480,9 @@
     </div>
 
     <script src="./js/modal.js"></script>
-    <script src="./js/mobile-menu.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="./js/mobile-menu.js"></script>
 </body>
 </html>

@@ -1,9 +1,13 @@
 .page-header {
+    position: relative;
+
     border-bottom: 1px solid $border-color;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
     letter-spacing: 0.02em;
+    @media screen and (min-width: 768px) {
+        font-size: 14px;
+        line-height: 1.14;
+    }
 
     &__container {
         height: 60px;
@@ -40,33 +44,93 @@
         color: $hover-color;
     }
 }
-.navigation-container {
-    @media screen and (max-width: 767px) {
-        display: none;
+.nav-panel {
+    @media screen and (min-width: 768px) {
+        margin-right: auto;
     }
 }
-.nav-panel {
-    // margin-right: auto;
-}
 .nav-list {
-    // display: flex;
-    // align-items: center;
+    margin: 0;
 
-    // &__item:not(:last-child) {
-    // margin-right: 50px;
-    // }
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+    }
+    @media screen and (max-width: 767px) {
+        margin-bottom: 306px;
+    }
+
+    &__item:not(:last-child) {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 32px;
+        }
+        @media screen and (min-width: 768px) {
+            margin-right: 50px;
+        }
+    
+    }
 }
 .nav-list__links {
     // padding-top: 32px;
     // padding-bottom: 32px;
-    // text-decoration: none;
-    // color: inherit;
-    // transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    color: inherit;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 40px;
+    line-height: 1.17;
 
-    // &:hover,
-    // &:focus {
-    //     color: $hover-color;
+    &:hover,
+    &:focus {
+        color: $hover-color;
+    }
+}
+.mobile-contacts {
+    // @media screen and (min-width: 768px) {
+    //     display: none;
     // }
+    margin: 0;
+    margin-bottom: 64px;
+    
+    &__item:not(:last-child){
+        margin-bottom: 32px;
+    }
+
+    &__tel {
+        text-decoration: none;
+        font-size: 34px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        color: $hover-color;
+    }
+    &__mail {
+        text-decoration: none;
+        font-size: 24px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+        color: $secondary-text-color;
+    }
+}
+.mobile-networks {
+    margin: 0;
+    display: flex;
+
+    &__item:not(:first-child) {
+        padding-left: 10px;
+    }
+    &__item:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+
+    &__links {
+        display: block;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 1.22;
+        letter-spacing: 0.02em;
+        color: $hover-color;
+    }
+
 }
 .header-contacts {
     // display: flex;
@@ -75,6 +139,9 @@
     // &__item:not(:last-child) {
     //     margin-right: 50px;
     // }
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 }
 .header-contacts__links {
     // display: flex;
@@ -100,14 +167,32 @@
     padding: 0;
     border: none;
     background-color: transparent;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    & .close-menu {
-        display: none;
+    &:hover,
+    &:focus {
+        color: $hover-color;
     }
-    &.is-open .close-menu {
+
+    &--close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+    }
+}
+.menu-container {
+    position: absolute;
+
+    display: none;
+    top: 0;
+    left:0;
+    width: 100%;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+    background-color: $third-text-color;
+
+    &.is-open {
         display: block;
-    }
-    &.is-open .open-menu {
-        display: none;
     }
 }
