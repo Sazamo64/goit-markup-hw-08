@@ -301,6 +301,22 @@ body {
   padding-bottom: 118px;
   text-align: center;
   background-color: #212121;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/Background.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Background.jpg);
+  background-position: center;
+}
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/Background_2x.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Background_2x.jpg);
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 1599px) {
+  .hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 @media screen and (min-width: 1600px) {
   .hero {
@@ -376,7 +392,6 @@ body {
 }
 
 .qualities__icon {
-  width: 450px;
   height: 120px;
   margin-bottom: 30px;
   display: -webkit-box;
@@ -390,6 +405,11 @@ body {
           align-items: center;
   border-radius: 4px;
   background-color: #F5F4FA;
+}
+@media screen and (min-width: 480px) {
+  .qualities__icon {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 768px) {
   .qualities__icon {
@@ -599,13 +619,27 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
-@media screen and (max-width: 1599px) {
+@media screen and (max-width: 479px) {
+  .clients {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .clients__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 1599px) {
   .clients {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .clients__item:not(:nth-child(2n+2)) {
     margin-right: 30px;
   }
@@ -830,10 +864,14 @@ body {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
+@media screen and (min-width: 480px) and (max-width: 1599px) {
+  .subscription-form__field {
+    width: 450px;
+  }
+}
 @media screen and (max-width: 1599px) {
   .subscription-form__field {
     margin-bottom: 20px;
-    width: 450px;
     margin-left: auto;
     margin-right: auto;
   }
