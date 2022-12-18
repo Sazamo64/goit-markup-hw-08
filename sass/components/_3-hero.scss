@@ -33,7 +33,6 @@
 
 
 .hero__header {
-    width: 360px;
     margin: 0;
     margin-left: auto;
     margin-right: auto;
@@ -44,6 +43,9 @@
     line-height: 1.62;
     letter-spacing: 0.06em;
     color: $third-text-color;
+    @media screen and (min-width: 480px) {
+        width: 360px;
+    }
     @media screen and (min-width: 1600px) {
         width: 696px;
 

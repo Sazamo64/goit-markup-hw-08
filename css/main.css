@@ -327,7 +327,6 @@ body {
 }
 
 .hero__header {
-  width: 360px;
   margin: 0;
   margin-left: auto;
   margin-right: auto;
@@ -337,6 +336,11 @@ body {
   line-height: 1.62;
   letter-spacing: 0.06em;
   color: #FFFFFF;
+}
+@media screen and (min-width: 480px) {
+  .hero__header {
+    width: 360px;
+  }
 }
 @media screen and (min-width: 1600px) {
   .hero__header {
